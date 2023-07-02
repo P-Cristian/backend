@@ -1,0 +1,58 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+  <div class="col-md-3 mb-2 mb-md-0" (click)="redirectToLandingPage()" (mouseover)="mouseOver()" (mouseleave)="mouseLeave()" style="cursor:pointer;">
+      <svg class="bi" width="88" height="54" role="img" >
+        <ellipse cx="48" cy="32" rx="28" ry="24" fill="#434f5f"  />
+        <ellipse cx="48" cy="42" rx="22" ry="18" fill="#FFFFFF" />
+        <circle cx="48" cy="48" r="16" fill="#434f5f" />
+        <ellipse cx="48" cy="44" rx="8" ry="14" fill="#FFFFFF" />
+        <circle cx="24" cy="14" r="12" fill="#434f5f" />
+        <circle cx="72" cy="14" r="12" fill="#434f5f" />
+        <circle cx="48" cy="34" r="8" fill="#FFFFFF" />
+        <ellipse cx="48" cy="34" rx="4" ry="18" fill="#434f5f" />
+        <circle cx="48" cy="48" r="4" fill="#000000" />
+        <circle cx="38" cy="36" r="4" fill="#000000" />
+        <circle cx="58" cy="36" r="4" fill="#000000" />
+      </svg>
+  </div>
+
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li><a  class="nav-link px-2 link-secondary" (click)="redirectToLandingPage()">Home</a></li>
+    <li><a  class="nav-link px-2 link-secondary" (click)="showModal()">About</a></li>
+  </ul>
+
+  <div class="col-md-3 text-end">
+    <button type="button" class="btn btn-outline-light me-2" (click)="redirectToLoginPage()">Login</button>
+    <button type="button" class="btn btn-light" (click)="redirectToRegistrationPage()">Sign-up</button>
+  </div>
+</header>
+<div *ngIf="showMyModal" class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalAbout">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <h2 class="fw-bold mb-0">Text</h2>
+        <ul class="d-grid gap-4 my-5 list-unstyled small">
+          <li class="d-flex gap-4">
+            <div>
+              <h5 class="mb-0">Text</h5>
+              Text
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <div>
+              <h5 class="mb-0"> Text</h5>
+              Text
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <div>
+              <h5 class="mb-0"> Text</h5>
+              Text
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal" (click)="hideModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
